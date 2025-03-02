@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug archivo actual",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${file}",
+            "dlvFlags": ["--log"]
+        },
+        {
+            "name": "Debug paquete actual",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}",
+            "dlvFlags": ["--log"]
+        },
+        {
+            "name": "Debug con argumentos",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}",
+            "args": ["arg1", "arg2"],
+            "env": {
+                "ENV_VAR": "value"
+            }
+        },
+        {
+            "name": "Attach a proceso en ejecución",
+            "type": "go",
+            "request": "attach",
+            "mode": "remote",
+            "port": 2345,
+            "host": "127.0.0.1"
+        }
+    ]
+}

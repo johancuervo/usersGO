@@ -1,0 +1,22 @@
+GET http://localhost:8080/users/
+###
+POST http://localhost:8080/users/
+Content-Type: application/json
+
+{
+    "name": "Juan Morales",
+    "isActive": true
+}
+
+####
+GET http://localhost:8080/users/36017ff2-5634-4ac7-8cfd-0d51a712a0b8
+####
+DELETE  http://localhost:8080/users/066015b8-fd29-481a-80d6-f29011fa176d
+#####
+PUT http://localhost:8080/users/36017ff2-5634-4ac7-8cfd-0d51a712a0b8
+Content-Type: application/json
+
+{
+    "name": "Carlos Albarado",
+    "isActive": false
+}
